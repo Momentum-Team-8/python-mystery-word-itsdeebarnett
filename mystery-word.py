@@ -14,17 +14,26 @@ how many letters thats in the word"""
 enter more than one tell user the input is invalid and try again"""
 
 
+print("Welcome to the word guess of doom!!")
+
+
 word_file = open("words.txt").read().splitlines()
 random_word = random.choice(word_file)
 
-# display = '_'*len(random_word)
+# display = ('_')
 
-# def easy()
-# def medium()
-# def DOOM!!()
 
-# print("\n Welcome to Mystery Word Game")
-# print("\n Would you like to play a game?")
+# def easy(random_word):
+
+#     for char in random_word:
+#         if len(random_word) >= 4 and len(random_word) <= 6:
+#             easy_tier = []
+#             easy_tier.append(random_word)
+#         return easy_tier
+
+
+# def medium(random_word)
+# def DOOM!!(random_word)
 
 
 # answer = input("\n Enter Yes or No")
@@ -68,16 +77,16 @@ while guesses > 0:
     wrong_guesses = 0
     for char in random_word:
         if char in letter_guess:
-            print(char)
+            print(char, end=" ")
         else:
-            print("_"*len(random_word))
+            print("_", end=" ")
             wrong_guesses += 1
     if wrong_guesses == 0:
-        print("Congrats!! You win!")
-        print("The word is:  ", random_word)
+        print("\n Congrats!! You win!")
+        print("\n The word is:  ", random_word)
         break
 
-    guess = input("Make your guess:")
+    guess = input("\n Make your guess:")
     letter_guess += guess
 
     if guess not in random_word:
